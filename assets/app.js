@@ -419,10 +419,29 @@ function initMenu() {
   const nav = qs(".site-nav");
   if (!toggle || !nav) return;
 
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    nav.classList.remove("is-open");
+  };
+
   toggle.addEventListener("click", () => {
     const expanded = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!expanded));
     nav.classList.toggle("is-open", !expanded);
+  });
+
+  // Close menu when any nav link is clicked
+  qsa(".site-nav a", nav).forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close menu when clicking outside (empty space)
+  document.addEventListener("click", (e) => {
+    if (nav.classList.contains("is-open") &&
+      !nav.contains(e.target) &&
+      !toggle.contains(e.target)) {
+      closeMenu();
+    }
   });
 }
 
@@ -621,3 +640,36 @@ initLangButtons();
 initForm();
 initHeroSlider();
 setLanguage(currentLang);
+
+// Hide header on scroll down, show on scroll up
+(function initScrollHeader() {
+  const header = qs(".site-header");
+  if (!header) return;
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 80) {
+      // Scrolling down — hide
+      header.classList.add("is-hidden");
+    } else {
+      // Scrolling up — show immediately
+      header.classList.remove("is-hidden");
+    }
+
+    lastScrollTop = Math.max(0, scrollTop);
+  }, { passive: true });
+})();
+
+// Back to top button
+(function initBackToTop() {
+  const btn = qs("#back-to-top");
+  if (!btn) return;
+  window.addEventListener("scroll", () => {
+    btn.classList.toggle("is-visible", window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
