@@ -36,9 +36,8 @@ html[dir="rtl"] body {
 }
 
 /* Always display phone numbers left-to-right regardless of page language */
-a[href^="tel:"],
 a[href^="tel:"] span,
-[class*="phone"],
+[class*="phone"] span,
 .phone-number {
   direction: ltr;
   unicode-bidi: isolate;
