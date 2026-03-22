@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FOS-Agri | Culture, loisirs et voyages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body class="service-page" data-page="service" data-service="culture">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="../index.html"><span class="brand-mark"><img src="../logo.png" alt="Logo FOS-Agri" /></span><span class="brand-copy"><strong>FOS-Agri</strong><small data-i18n="brand.subtitle"></small></span></a>
+        <div class="nav-actions">
+          <div class="lang-toggle" role="group" aria-label="Choix de langue"><button class="lang-btn is-active" type="button" data-lang="fr">FR</button><button class="lang-btn" type="button" data-lang="ar">AR</button></div>
+          <a class="member-link" href="../index.html#services" data-i18n="nav.services"></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero service-hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <div class="service-meta"><i id="service-icon" class="fa-solid fa-umbrella-beach"></i><span data-i18n="services.tag"></span></div>
+          <h1 id="service-title"></h1>
+          <p class="hero-description" id="service-description"></p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container service-layout">
+          <article class="service-box">
+            <h3 data-i18n="about.scopeTitle"></h3>
+            <p id="service-detail"></p>
+          </article>
+          <aside class="service-summary">
+            <h3 data-i18n="member.clubTitle"></h3>
+            <ul class="service-list">
+              <li><a href="../index.html#events" data-i18n="events.title"></a></li>
+              <li><a href="../index.html#partners" data-i18n="partners.title"></a></li>
+              <li><a href="../index.html#contact" data-i18n="hero.ctaContact"></a></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="../assets/data.js"></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
