@@ -18,12 +18,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text);
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(200, 164, 77, 0.2), transparent 28%),
     linear-gradient(180deg, #fbfaf6 0%, #f4f6ef 100%);
@@ -31,6 +33,16 @@ body {
 
 html[dir="rtl"] body {
   font-family: "Tajawal", sans-serif;
+}
+
+/* Always display phone numbers left-to-right regardless of page language */
+a[href^="tel:"],
+a[href^="tel:"] span,
+[class*="phone"],
+.phone-number {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
 }
 
 a {
