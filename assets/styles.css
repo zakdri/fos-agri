@@ -203,7 +203,7 @@ textarea {
 }
 
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -217,10 +217,6 @@ textarea {
 
 .site-header.is-hidden {
   transform: translateY(-100%);
-}
-
-body {
-  padding-top: 5rem;
 }
 
 .nav-shell {
@@ -1424,8 +1420,8 @@ html[dir="rtl"] .service-layout {
 
 @media (max-width: 980px) {
   .site-nav {
-    position: fixed;
-    top: 5rem;
+    position: absolute;
+    top: calc(100% + 0.4rem);
     left: 1rem;
     right: 1rem;
     display: none;
