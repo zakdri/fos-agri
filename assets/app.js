@@ -373,7 +373,8 @@ function renderRegions() {
 function renderPartners() {
   const container = qs("#partners-grid");
   if (!container) return;
-  container.innerHTML = siteData.partners
+
+  const logos = siteData.partners
     .map(
       (partner) => `
         <article class="partner-card">
@@ -382,6 +383,12 @@ function renderPartners() {
       `
     )
     .join("");
+
+  // Duplicate logos for seamless infinite loop
+  container.innerHTML = `
+    <div class="partners-set">${logos}</div>
+    <div class="partners-set" aria-hidden="true">${logos}</div>
+  `;
 }
 
 function renderServicePage() {
