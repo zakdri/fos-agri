@@ -1695,7 +1695,7 @@ html[dir="rtl"] .back-to-top {
 
 @media (max-width: 980px) {
   .map-info-card {
-    min-height: 18.5rem;
+    min-height: 14.5rem;
   }
 
   .morocco-map {
