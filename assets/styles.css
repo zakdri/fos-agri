@@ -1176,6 +1176,9 @@ html[dir="rtl"] .timeline-item::before {
   display: grid;
   place-items: center;
   min-height: 8rem;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 
 .partner-card img {

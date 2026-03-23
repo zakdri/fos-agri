@@ -729,23 +729,23 @@
   partners: [
     {
       name: "SNTL",
-      logo: "https://fosagri.process.preprod.moovapps.com/moovapps/resource/filecenter/document/01h-00000k-009/sntl.png"
+      logo: "assets/partenaires/sntl.png"
     },
     {
       name: "Salafin",
-      logo: "https://fosagri.process.preprod.moovapps.com/moovapps/resource/filecenter/document/01h-00000k-006/salafin.jpg"
+      logo: "assets/partenaires/salafin.png"
     },
     {
       name: "BMCI",
-      logo: "https://fosagri.process.preprod.moovapps.com/moovapps/resource/filecenter/document/01h-00000k-008/bmci.png"
+      logo: "assets/partenaires/bmci.png"
     },
     {
       name: "WAFA",
-      logo: "https://fosagri.process.preprod.moovapps.com/moovapps/resource/filecenter/document/01h-00000k-007/wafa.png"
+      logo: "assets/partenaires/wafa.png"
     },
     {
       name: "WAFAINJAD",
-      logo: "https://fosagri.process.preprod.moovapps.com/moovapps/resource/filecenter/document/01h-00000k-003/wafainjad.png"
+      logo: "assets/partenaires/wafainjad.png"
     }
   ]
 };
