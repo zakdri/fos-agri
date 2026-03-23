@@ -62,6 +62,9 @@
         subtitle:
           "Selectionnez une region ou survolez une ville pour afficher une delegation ou un point de presence."
       },
+      region: {
+        contact: "Contacter la délégation"
+      },
       member: {
         memberTag: "Espace adherent",
         memberTitle: "Consulter l'extranet et les services personnalises",
@@ -194,6 +197,9 @@
         tag: "الحضور الوطني",
         title: "شبكة قرب عبر المغرب",
         subtitle: "اختر جهة أو مرر المؤشر فوق مدينة لعرض مندوبية أو نقطة حضور."
+      },
+      region: {
+        contact: "اتصل بالمندوبية"
       },
       member: {
         memberTag: "فضاء المنخرط",
@@ -733,7 +739,7 @@
     },
     {
       name: "Salafin",
-      logo: "assets/partenaires/salafin.png"
+      logo: "assets/partenaires/salafin.png?v=2"
     },
     {
       name: "BMCI",
