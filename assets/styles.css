@@ -953,7 +953,19 @@ html[dir="rtl"] .timeline-item::before {
 }
 
 .testimonial-card {
-  background: linear-gradient(180deg, rgba(31, 106, 67, 0.08), rgba(255, 255, 255, 0.95));
+  background:
+    linear-gradient(90deg, rgba(24, 79, 52, 0.92) 0%, rgba(24, 79, 52, 0.78) 42%, rgba(24, 79, 52, 0.28) 100%),
+    linear-gradient(180deg, rgba(18, 43, 30, 0.2), rgba(18, 43, 30, 0.05)),
+    url("./Temoignage/Temoignage.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.testimonial-card .section-tag {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-card .section-tag::before {
+  background: #fff;
 }
 
 .testimonial-card blockquote {
@@ -964,7 +976,7 @@ html[dir="rtl"] .timeline-item::before {
 
 .testimonial-author {
   font-weight: 700;
-  color: var(--green);
+  color: var(--gold);
 }
 
 .map-layout {
